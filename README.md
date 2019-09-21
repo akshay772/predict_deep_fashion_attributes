@@ -1,0 +1,2 @@
+# predict_deep_fashion_attributes
+Garments in fashion domain are characterised by attributes like pattern, neck types, sleeve types, size, material. Ecommerce websites use this data to help users navigate through their catalog via filters and effective categorization. To predict these visual features using Deep Learning. Please train a ​Single Neural Network to predict all three attributes for each garment.
