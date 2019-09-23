@@ -11,12 +11,14 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
     * Pattern attribute is distributed to 0-9 types
     
 #### Convolutional Neural Network is trained :
-* Download the trained model [here]() and
+* Download the trained model [here](https://drive.google.com/open?id=1zyJwXTkm9Kdu8KY10XbBZgLi-bkTs02w) and
  paste them in "models" folder 
  * To train the model run : `python3 main_multi_label.py /path/to/data/folder`
  * To predict individual attributes for an image run : `python3 main_multi_label.py /path/example/image
    /path/to/saved_model/` 
     * The current accuracy `90.11%` on 10% validation set.
+    * Output of a predicted image is a string of pattern : `("attribute1" + "attribute_code1"), ("attribute2
+    " + "attribute_code2"), ("attribute3" + "attribute_code3")`
 
 #### Fine-tuned pretrained vgg16 model and retrained last layers with our dataset
 * Download the trained model [here]()
