@@ -13,9 +13,21 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
 * Download the trained model [here]() and
  paste them in "models" folder 
  * To train the model run : `python3 main_multi_label.py /path/to/data/folder`
- * To predict individual sentences run : `python3 main_multi_label.py "example sentence to classify" /path
-/saved_model/` 
+ * To predict individual attributes for an image run : `python3 main_multi_label.py /path/example/image
+   /path/to/saved_model/` 
     * The current accuracy `90.11%` on 10% validation set.
+
+#### Fine-tuning pretrained vgg16 model and retraining last layers with our dataset
+* Download the trained model [here]()
+* To train teh model run : `python3 main_multi_label_pretrained.py "path/to/data/folder`
+* To predict individual attributes for an image run : `python3 main_multi_label_pretrained.py "path/to
+/example/image/to/predict  /path/to/saved/model`
+    * The current accuracy `xx.xx%` on 10% validation set.
+    * The approach is to share the pretrained layers between all attributes and defining last layers for
+     each attributes to predict inidividually. 
     
 ### Need for improvement
+* Taking care of #NA values, will take much more development. One way is implemented to treat them as a
+ separate class. 
+ * A new approach is to train a multi-task network which performs better in terms of model generalization. 
  
