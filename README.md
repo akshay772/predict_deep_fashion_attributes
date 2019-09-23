@@ -2,6 +2,7 @@
 Garments in fashion domain are characterised by attributes like pattern, neck types, sleeve types, size, material. Ecommerce websites use this data to help users navigate through their catalog via filters and effective categorization. To predict these visual features using Deep Learning. Please train a ​Single Neural Network to predict all three attributes for each garment.
 
 #### Data Representation
+* Dataset can be downloaded form [here]()
 * All images are stored in images folder. 
 * Attributes for each image is stored in attributes.csv file with id as image filenames and "neck
 ", "sleeve_length" and "pattern" as their attributes
@@ -17,7 +18,7 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
    /path/to/saved_model/` 
     * The current accuracy `90.11%` on 10% validation set.
 
-#### Fine-tuning pretrained vgg16 model and retraining last layers with our dataset
+#### Fine-tuned pretrained vgg16 model and retrained last layers with our dataset
 * Download the trained model [here]()
 * To train teh model run : `python3 main_multi_label_pretrained.py "path/to/data/folder`
 * To predict individual attributes for an image run : `python3 main_multi_label_pretrained.py "path/to
