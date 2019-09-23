@@ -12,8 +12,8 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
 #### Convolutional Neural Network is trained :
 * Download the trained model [here]() and
  paste them in "models" folder 
- * To train the model run : `python3 main_CNN.py /path/to/data/folder`
- * To predict individual sentences run : `python3 main_CNN.py "example sentence to classify" /path
+ * To train the model run : `python3 main_multi_label.py /path/to/data/folder`
+ * To predict individual sentences run : `python3 main_multi_label.py "example sentence to classify" /path
 /saved_model/` 
     * The current accuracy `90.11%` on 10% validation set.
     
