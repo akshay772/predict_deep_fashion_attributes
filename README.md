@@ -22,7 +22,7 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
 
 #### Fine-tuned pretrained vgg16 model and retrained last layers with our dataset
 * Download the trained model [here]()
-* To train teh model run : `python3 main_multi_label_pretrained.py "path/to/data/folder`
+* To train teh model run : `python3 multi_label_vgg_nn.py`
 * To predict individual attributes for an image run : `python3 main_multi_label_pretrained.py "path/to
 /example/image/to/predict  /path/to/saved/model`
     * The current accuracy `xx.xx%` on 10% validation set.
@@ -33,4 +33,8 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
 * Taking care of #NA values, will take much more development. One way is implemented to treat them as a
  separate class. 
  * A new approach is to train a multi-task network which performs better in terms of model generalization. 
+ * The pretrained model is still in training and taking lots of time. Will update when model is trained and
+  upload to google drive.
+  
+   
  
