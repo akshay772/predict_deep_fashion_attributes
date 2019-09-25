@@ -154,7 +154,7 @@ def train_attribute_model( model, pretrained_model, train_dset_loader, valid_dse
                 
                 # Statistics
                 running_loss += loss.data.item()
-                running_corrects += torch.sum( preds == labels.data )
+                running_corrects += torch.sum( preds == labels.data ).item()
             
             epoch_loss = running_loss / dset_sizes[ phase ]
             epoch_acc = running_corrects / dset_sizes[ phase ]
@@ -237,7 +237,7 @@ def create_attributes_fc_model(pretrained_fc, pretrained_features, fc_dim, targe
 
 def create_attributes_model(ModelClass, in_dims, pretrained_features, target_columns, weights_root,
                             labels_file, train_images_folder, valid_images_folder=None, is_train=True,
-                            batch_size=32, num_workers=4, num_epochs=10, use_gpu=None):
+                            batch_size=32, num_workers=4, num_epochs=30, use_gpu=None):
     models = {}
     for col_name, col_dim in target_columns.items():
         print("Processing Attribute: {}".format(col_name))
