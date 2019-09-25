@@ -38,6 +38,7 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
   upload to google drive. Training is done and took 996 minutes.
   * Introducing k cross fold validation to make every batch_size a representable whole of complete dataset. 
   * Increasing no of data points via data augmentation.
+  * Changing the transformations performed and using more related normalizing values. 
   
    
  
