@@ -35,7 +35,9 @@ Garments in fashion domain are characterised by attributes like pattern, neck ty
  * A new approach is to train a multi-task network which performs better in terms of model generalization. 
  * The pretrained model is still in training and taking lots of time. Will update when model is trained again
   and
-  upload to google drive. Training is done and took 317.000000m 36.964701s.
+  upload to google drive. Training is done and took 996 minutes.
+  * Introducing k cross fold validation to make every batch_size a representable whole of complete dataset. 
+  * Increasing no of data points via data augmentation.
   
    
  
