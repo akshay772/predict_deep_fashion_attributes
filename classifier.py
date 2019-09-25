@@ -212,29 +212,6 @@ def train_model(model, pretrained_features, target_column, labels_file, train_im
     return model
 
 
-def create_attributes_fc_model(pretrained_fc, pretrained_features, fc_dim, target_columns, weights_root,
-                            labels_file, train_images_folder, valid_images_folder=None, is_train=True,
-                            batch_size=32, num_workers=4, num_epochs=10,  use_gpu=None):
-    models = {}
-    for col_name, col_dim in target_columns.items():
-        print("Processing Attribute: {}".format(col_name))
-        weights_path = os.path.join(weights_root, col_name + ".pth")
-        load_weights_path = None
-        if os.path.exists(weights_path):
-            load_weights_path = weights_path
-        model = load_fc_model(pretrained_fc, fc_dim, col_dim, weights_path=load_weights_path, use_gpu=use_gpu)
-        if is_train:
-            print("Start Training for: {}".format(col_name))
-            model = train_model(model, pretrained_features, col_name, labels_file, train_images_folder,
-                                valid_images_folder,
-                                batch_size, num_workers, num_epochs,
-                                use_gpu=use_gpu,
-                               flatten_pretrained_out=True)
-        save_model(model, weights_path)
-        models[col_name] = model
-    return models
-
-
 def create_attributes_model(ModelClass, in_dims, pretrained_features, target_columns, weights_root,
                             labels_file, train_images_folder, valid_images_folder=None, is_train=True,
                             batch_size=32, num_workers=4, num_epochs=30, use_gpu=None):
